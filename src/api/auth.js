@@ -2,7 +2,11 @@ import instance from ".";
 import { storeToken } from "./storage";
 
 const login = async (userInfo) => {
-  const { data } = await instance.post("/auth/login", userInfo);
+  console.log(userInfo);
+  const { data } = await instance.post(
+    "/mini-project/api/auth/login",
+    userInfo
+  );
   if (data.token) {
     storeToken(data.token);
   }
@@ -15,7 +19,11 @@ const register = async (userInfo) => {
   for (let key in userInfo) {
     formData.append(key, userInfo[key]);
   }
-  const { data } = await instance.post("/auth/register", formData);
+  console.log(userInfo);
+  const { data } = await instance.post(
+    "/mini-project/api/auth/register",
+    formData
+  );
   if (data.token) {
     storeToken(data.token);
   }

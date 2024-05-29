@@ -8,9 +8,7 @@ const Navbar = ({ user, setUser }) => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link to="/">
-              <span className="font-semibold text-xl text-white">
-                Our Notes
-              </span>
+              <span className="font-semibold text-xl text-white">Bank</span>
             </Link>
           </div>
           <div className="block">
