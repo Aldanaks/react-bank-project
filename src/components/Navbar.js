@@ -19,6 +19,12 @@ const Navbar = ({ user, setUser }) => {
               >
                 Home
               </NavLink>
+              <NavLink
+                to="/transactions"
+                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+              >
+                Transaction
+              </NavLink>
 
               {user ? (
                 <button onClick={setUser(false)}>logout</button>

@@ -9,6 +9,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { getToken } from "./api/storage";
 import UserContext from "./context/UserContext";
+import Transactions from "./pages/Transactions";
 
 function App() {
   const [user, setUser] = useState(false);
@@ -25,8 +26,8 @@ function App() {
         <Navbar user={user} setUser={setUser} />
         <Routes>
           <Route path="/" Component={Home} />
-          {/* <Route path="/transactions" Component={Transactions} />
-        <Route path="/notes/:noteId" Component={Note} /> */}
+          <Route path="/transactions" Component={Transactions} />
+          {/* <Route path="/notes/:noteId" Component={Note} /> */} */
           <Route path="/login" Component={Login} />
           <Route path="/register" Component={Register} />
           <Route path="/users" Component={Users} />
