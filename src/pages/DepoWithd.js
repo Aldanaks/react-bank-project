@@ -38,9 +38,9 @@ export default function DepoWithd() {
     }
   };
   return (
-    <div>
+    <div className="">
       <div
-        className="navyblue min-h-screen flex items-center justify-center absolute inset-0 z-[-1]"
+        className="navyblue min-h-screen flex items-center justify-center absolute inset-0 z-[-1] flex-col gap-3"
         style={{ position: "fixed" }}
       >
         <div className="max-w-md w-full px-6 py-8 bg-gray-800 rounded-md shadow-md">
@@ -55,7 +55,7 @@ export default function DepoWithd() {
 
         {/* toggle switch you need a state  */}
 
-        <div className="max-w-md w-full px-6 py-8 bg-gray-800 rounded-md shadow-md">
+        <div className="max-w-md w-full px-6 py-8 bg-gray-800 rounded-md shadow-md ">
           <div className="flex gap-5 text-white justify-center">
             <h1>Deposit</h1>
             <label
