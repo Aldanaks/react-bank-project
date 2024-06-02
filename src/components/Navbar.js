@@ -53,10 +53,10 @@ const Navbar = () => {
                   </NavLink>
 
                   <NavLink
-                    to="/withdraw"
+                    to="/DepoWithd"
                     className="text-gray-300 hover:bg-sky-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
-                    Withdraw
+                    Balance
                   </NavLink>
 
                   <NavLink

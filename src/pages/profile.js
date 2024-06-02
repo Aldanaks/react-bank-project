@@ -17,8 +17,8 @@ const Profile = () => {
 
   return (
     <div>
-      <h1>{profile.username}'s Profile</h1>
-      <p>Balance: {profile.balance}</p>
+      <h1 > {profile.username}'s Profile</h1>
+      <p >Balance: {profile.balance}</p>
     </div>
   );
 };
