@@ -44,6 +44,12 @@ const getTrans = async () => {
   const { data } = await instance.get("/mini-project/api/transactions/my");
   return data;
 };
+const deposit = async () => {
+  const { data } = await instance.put(
+    "//mini-project/api/transactions/deposit"
+  );
+  return data;
+};
 
 const withdraw = async (amount) => {
   const { data } = await instance.put(

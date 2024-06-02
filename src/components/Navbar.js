@@ -18,6 +18,9 @@ const Navbar = () => {
               <span className="font-semibold text-xl text-blue-300 ">
                 Royal Bank of Kuwait{" "}
               </span>
+              <span className="font-semibold text-xl text-blue-300 ">
+                Royal Bank of Kuwait{" "}
+              </span>
             </Link>
           </div>
           <div className="block">

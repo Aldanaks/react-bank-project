@@ -15,6 +15,7 @@ const Login = () => {
     onSuccess: () => {
       setUser(true);
       navigate("/DepoWithd");
+      navigate("/DepoWithd");
     },
   });
 
