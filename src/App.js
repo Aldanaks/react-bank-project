@@ -27,14 +27,13 @@ function App() {
         <Navbar user={user} setUser={setUser} />
         <Routes>
           <Route path="/" Component={Home} />
+          <Route path="/DepoWithd" Component={DepoWithd} />
           <Route path="/transactions" Component={Transactions} />
           {/* <Route path="/notes/:noteId" Component={Note} /> */} */
           <Route path="/login" Component={Login} />
           <Route path="/register" Component={Register} />
           <Route path="/users" Component={Users} />
           <Route path="/profile" component={Profile} />
-
-
         </Routes>
       </div>
     </UserContext.Provider>

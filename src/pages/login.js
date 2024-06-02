@@ -14,7 +14,7 @@ const Login = () => {
     mutationFn: () => login(userInfo),
     onSuccess: () => {
       setUser(true);
-      navigate("/");
+      navigate("/DepoWithd");
     },
   });
 
