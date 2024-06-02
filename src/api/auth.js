@@ -2,7 +2,6 @@ import instance from ".";
 import { storeToken } from "./storage";
 
 const login = async (userInfo) => {
-  console.log(userInfo);
   const { data } = await instance.post(
     "/mini-project/api/auth/login",
     userInfo
@@ -19,7 +18,7 @@ const register = async (userInfo) => {
   for (let key in userInfo) {
     formData.append(key, userInfo[key]);
   }
-  console.log(userInfo);
+
   const { data } = await instance.post(
     "/mini-project/api/auth/register",
     formData
@@ -31,13 +30,13 @@ const register = async (userInfo) => {
   return data;
 };
 
-const me = async () => {
-  const { data } = await instance.get("/auth/me");
+const getProfile = async () => {
+  const { data } = await instance.get("/mini-project/api/auth/me");
   return data;
 };
 
 const getAllUsers = async () => {
-  const { data } = await instance.get("/auth/users");
+  const { data } = await instance.get("/mini-project/api/auth/users");
   return data;
 };
 
@@ -46,4 +45,27 @@ const getTrans = async () => {
   return data;
 };
 
-export { login, register, me, getAllUsers, getTrans };
+const withdraw = async () => {
+  const { data } = await instance.put(
+    "'/mini-project/api/transactions/withdraw"
+  );
+  return data;
+};
+
+const deposit = async () => {
+  const { data } = await instance.put(
+    "//mini-project/api/transactions/deposit"
+  );
+
+  return data;
+};
+
+export {
+  login,
+  register,
+  getProfile,
+  getAllUsers,
+  getTrans,
+  deposit,
+  withdraw,
+};

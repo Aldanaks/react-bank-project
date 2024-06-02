@@ -29,8 +29,8 @@ const Login = () => {
   };
 
   return (
-    <div className="bg-gray-900 min-h-screen flex items-center justify-center absolute inset-0 z-[-1]">
-      <div className="max-w-md w-full px-6 py-8 bg-gray-800 rounded-md shadow-md">
+    <div className="bg-white min-h-screen flex items-center justify-center absolute inset-0 z-[-1]">
+      <div className="max-w-md w-full px-6 py-8 bg-sky-800 rounded-md shadow-md">
         <h2 className="text-3xl text-white font-semibold mb-6">Login</h2>
         <form onSubmit={handleFormSubmit}>
           <div className="mb-4">
@@ -68,7 +68,7 @@ const Login = () => {
           <div className="flex justify-center">
             <button
               type="submit"
-              className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors"
+              className="px-4 py-2 bg-sky-600 text-white rounded-md hover:bg-sky-400 transition-colors"
             >
               Login
             </button>

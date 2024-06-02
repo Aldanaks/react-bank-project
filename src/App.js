@@ -9,7 +9,8 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { getToken } from "./api/storage";
 import UserContext from "./context/UserContext";
-import Transactions from "./pages/Transactions";
+import Transactions from "./pages/transactions";
+import Profile from "./pages/profile";
 
 function App() {
   const [user, setUser] = useState(false);
@@ -22,7 +23,7 @@ function App() {
 
   return (
     <UserContext.Provider value={[user, setUser]}>
-      <div className="App font-mono ">
+      <div className="App font-arial ">
         <Navbar user={user} setUser={setUser} />
         <Routes>
           <Route path="/" Component={Home} />
@@ -31,6 +32,9 @@ function App() {
           <Route path="/login" Component={Login} />
           <Route path="/register" Component={Register} />
           <Route path="/users" Component={Users} />
+          <Route path="/profile" component={Profile} />
+
+
         </Routes>
       </div>
     </UserContext.Provider>
