@@ -52,20 +52,16 @@ const withdraw = async () => {
   return data;
 };
 
+
 const deposit = async () => {
-  const { data } = await instance.put(
-    "//mini-project/api/transactions/deposit"
-  );
+    const { data } = await instance.put(
+      "//mini-project/api/transactions/deposit"
+  
+    );
+  
+    return data;
+  
+  };
+  
 
-  return data;
-};
-
-export {
-  login,
-  register,
-  getProfile,
-  getAllUsers,
-  getTrans,
-  deposit,
-  withdraw,
-};
+export { login, register, getProfile, getAllUsers, getTrans, deposit, withdraw };

@@ -11,6 +11,7 @@ import { getToken } from "./api/storage";
 import UserContext from "./context/UserContext";
 import Transactions from "./pages/transactions";
 import Profile from "./pages/profile";
+import DepoWithd from "./pages/DepoWithd";
 
 function App() {
   const [user, setUser] = useState(false);
@@ -33,7 +34,7 @@ function App() {
           <Route path="/login" Component={Login} />
           <Route path="/register" Component={Register} />
           <Route path="/users" Component={Users} />
-          <Route path="/profile" component={Profile} />
+          <Route path="/profile" Component={Profile} />
         </Routes>
       </div>
     </UserContext.Provider>

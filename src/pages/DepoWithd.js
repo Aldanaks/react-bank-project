@@ -1,15 +1,15 @@
-import { useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery } from "@tanstack/react-query";
 
 import React, { useEffect, useState } from "react";
 
-import { deposit } from "../api/auth";
+import { deposit, login } from "../api/auth";
 
 export default function DepoWithd() {
   const { mutate } = useMutation({
     mutationKey: ["DepoWithd"],
-    mutationFn: () => login(userInfo),
+    mutationFn: () => login(),
     onSuccess: () => {
-      setUser(true);
+      //   setUser(true);
     },
   });
 
@@ -27,7 +27,7 @@ export default function DepoWithd() {
     setQuery(e.target.value);
   };
 
-  const [amount, setAmount] = useState(data);
+  //   const [amount, setAmount] = useState(data);
 
   // useEffect(() => {
 
