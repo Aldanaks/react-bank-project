@@ -44,12 +44,6 @@ const getTrans = async () => {
   const { data } = await instance.get("/mini-project/api/transactions/my");
   return data;
 };
-const deposit = async () => {
-  const { data } = await instance.put(
-    "//mini-project/api/transactions/deposit"
-  );
-  return data;
-};
 
 const withdraw = async (amount) => {
   const { data } = await instance.put(
@@ -67,6 +61,27 @@ const deposit = async (amount) => {
 
   return data;
 };
+const moneyTransfer = async (amount, username) => {
+  const { data } = await instance.put(
+    `/mini-project/api/transactions/transfer/${username}`,
+    { amount: amount }
+  );
+  return data;
+};
+const getUserID = async (userId) => {
+  const { data } = await instance.get(`/mini-project/api/auth/user/${userId}`);
+  return data;
+};
+const logout = () => {
+  localStorage.removeItem("token");
+};
+
+const Updatep = async (image) => {
+  const { data } = await instance.put(
+    `/mini-project/api/auth/profile/${image}`
+  );
+  return data;
+};
 
 export {
   login,
@@ -76,4 +91,8 @@ export {
   getTrans,
   deposit,
   withdraw,
+  moneyTransfer,
+  getUserID,
+  logout,
+  Updatep,
 };

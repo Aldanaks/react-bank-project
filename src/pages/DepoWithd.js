@@ -37,6 +37,9 @@ export default function DepoWithd() {
       withdrawMuatate();
     }
   };
+  const isValidInput = (input) => {
+    return !isNaN(input) && input >= 0;
+  };
   return (
     <div className="">
       <div
@@ -49,7 +52,7 @@ export default function DepoWithd() {
           </h3>
 
           <h3 className=" text-white font-semibold mb-6">
-            {profile?.balance}KWD
+            {profile?.balance} KWD
           </h3>
         </div>
 
@@ -78,9 +81,7 @@ export default function DepoWithd() {
             </label>
             <h1>Withdraw</h1>
           </div>
-
-          <h3>Amount</h3>
-
+          <h3 class="text-white">Amount</h3>
           <input
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
@@ -89,14 +90,15 @@ export default function DepoWithd() {
             placeholder="Amount"
             aria-describedby="search-addon"
           />
-
-          <button
-            onClick={onSubmit}
-            type="submit"
-            className="px-4 py-2 lightblue text-white rounded-md hover:bg-yellw-600 transition-colors"
-          >
-            submit
-          </button>
+          {isValidInput(amount) && (
+            <button
+              onClick={onSubmit}
+              type="submit"
+              className="px-4 py-2 lightblue text-white rounded-md hover:bg-yellw-600 transition-colors gap-3"
+            >
+              submit
+            </button>
+          )}
         </div>
       </div>
     </div>

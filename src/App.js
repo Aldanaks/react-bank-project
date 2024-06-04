@@ -12,6 +12,7 @@ import UserContext from "./context/UserContext";
 import Transactions from "./pages/transactions";
 import Profile from "./pages/profile";
 import DepoWithd from "./pages/DepoWithd";
+import MoneyTransfer from "./pages/MoneyTransfer";
 
 function App() {
   const [user, setUser] = useState(false);
@@ -36,6 +37,7 @@ function App() {
           <Route path="/register" Component={Register} />
           <Route path="/users" Component={Users} />
           <Route path="/profile" Component={Profile} />
+          <Route path="/MoneyTrensfer/:userID" Component={MoneyTransfer} />
         </Routes>
       </div>
     </UserContext.Provider>

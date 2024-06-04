@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import React from "react";
 import { getAllUsers } from "../api/auth";
+import { Link } from "react-router-dom";
 
 const User = () => {
   const { data: users } = useQuery({
@@ -30,6 +31,9 @@ const User = () => {
                   {user.username}
                 </h3>
                 <p className="text-gray-300">{user.email}</p>
+                <button className=" px-4 py-2 lightblue text-white rounded-md hover:bg-yellw-600 transition-colors gap-3">
+                  <Link to={`/MoneyTrensfer/${user._id}`}>Transfer</Link>
+                </button>
               </div>
             </div>
           ))}
