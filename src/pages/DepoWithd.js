@@ -41,62 +41,54 @@ export default function DepoWithd() {
     return !isNaN(input) && input >= 0;
   };
   return (
-    <div className="">
-      <div
-        className="navyblue min-h-screen flex items-center justify-center absolute inset-0 z-[-1] flex-col gap-3"
-        style={{ position: "fixed" }}
-      >
-        <div className="max-w-md w-full px-6 py-8 bg-gray-800 rounded-md shadow-md">
-          <h3 className=" text-white font-semibold mb-6">
-            Your available Balance :{" "}
+    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+      <div className="flex flex-col items-center gap-6">
+        <div className="max-w-md w-full px-6 py-8 bg-white rounded-lg shadow-lg">
+          <h3 className="text-gray-800 font-semibold mb-6">
+            Your available Balance :
           </h3>
-
-          <h3 className=" text-white font-semibold mb-6">
+          <h3 className="text-gray-800 font-semibold mb-6">
             {profile?.balance} KWD
           </h3>
         </div>
 
-        {/* toggle switch you need a state  */}
-
-        <div className="max-w-md w-full px-6 py-8 bg-gray-800 rounded-md shadow-md ">
-          <div className="flex gap-5 text-white justify-center">
+        <div className="max-w-md w-full px-6 py-8 bg-white rounded-lg shadow-lg">
+          <div className="flex gap-5 text-gray-800 justify-center mb-4">
             <h1>Deposit</h1>
             <label
-              for="AcceptConditions"
-              class="relative inline-block h-8 w-14 cursor-pointer rounded-full bg-gray-300 transition [-webkit-tap-highlight-color:_transparent] has-[:checked]:bg-green-500"
+              htmlFor="AcceptConditions"
+              className="relative inline-block h-8 w-14 cursor-pointer rounded-full bg-gray-300 transition-all"
             >
-              {/* You need to manage the state from here */}
-
               <input
                 onClick={() => {
-                  if (choice == "deposit") setChoice("withdraw");
+                  if (choice === "deposit") setChoice("withdraw");
                   else setChoice("deposit");
                 }}
                 type="checkbox"
                 id="AcceptConditions"
-                class="peer sr-only"
+                className="peer sr-only"
               />
-
-              <span class="absolute inset-y-0 start-0 m-1 size-6 rounded-full bg-white transition-all peer-checked:start-6"></span>
+              <span className="absolute inset-y-0 left-0 m-1 w-6 h-6 rounded-full bg-white transition-all peer-checked:left-6 peer-checked:bg-green-500"></span>
             </label>
             <h1>Withdraw</h1>
           </div>
-          <h3 class="text-white">Amount</h3>
+
+          <h3 className="mb-4 text-gray-800">Amount</h3>
+
           <input
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
-            type="Amount"
-            className="w-full px-4 py-2 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            type="text"
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4"
             placeholder="Amount"
-            aria-describedby="search-addon"
           />
           {isValidInput(amount) && (
             <button
               onClick={onSubmit}
               type="submit"
-              className="px-4 py-2 lightblue text-white rounded-md hover:bg-yellw-600 transition-colors gap-3"
+              className="mt-8 inline-block rounded bg-sky-600 px-5 py-3 text-lg font-medium text-white shadow-lg transition-transform transform hover:scale-105 hover:bg-sky-700 focus:outline-none focus:ring focus:ring-sky-300"
             >
-              submit
+              Submit
             </button>
           )}
         </div>

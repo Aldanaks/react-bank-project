@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Updatep, getProfile } from "../api/auth";
-import { QueryClient, useMutation, useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import User from "./Users";
 
 const Profile = () => {
+  const queryClient = useQueryClient();
   const [userInfo, setUserInfo] = useState({});
 
   const { data: profile } = useQuery({
@@ -11,13 +12,11 @@ const Profile = () => {
     queryFn: getProfile,
   });
 
-  const [image, setImage] = useState(image);
-
   const { mutate } = useMutation({
     mutationKey: ["Updatep"],
-    mutationFn: () => Updatep(userInfo?.image),
+    mutationFn: () => Updatep(userInfo),
     onSuccess: () => {
-      QueryClient.invalidateQueries(["getMyInfo"]);
+      queryClient.invalidateQueries(["getMyInfo"]);
     },
   });
   console.log(profile);
@@ -37,15 +36,15 @@ const Profile = () => {
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md text-center">
         <div className="flex justify-center">
           <img
-            src={`https://react-bank-project.eapi.joincoded.com/${profile.image}`}
+            src={`https://react-bank-project.eapi.joincoded.com/${profile?.image}`}
             className=" flex flex-col items-center justify-center w-24 h-24 rounded-full mb-4"
           />
         </div>
 
         <h1 className="mb-6 text-2xl font-bold text-gray-800">
-          {profile.username}'s Profile
+          {profile?.username}'s Profile
         </h1>
-        <p className="text-lg text-gray-600">Balance: {profile.balance}</p>
+        <p className="text-lg text-gray-600">Balance: {profile?.balance}</p>
         <div className="mb-6">
           <label
             htmlFor="image"
@@ -66,8 +65,8 @@ const Profile = () => {
         <button
           onClick={mutate}
           type="submit"
-          className="w-15 px-4 py-2 bg-sky-700 text-white rounded-md hover:bg-sky-600 transition-colors"
-        >
+          className="mt-8 inline-block rounded bg-sky-600 px-12 py-3 text-lg font-medium text-white shadow-lg transition-transform transform hover:scale-105 hover:bg-sky-700 focus:outline-none focus:ring focus:ring-sky-300"
+          >
           Save
         </button>
       </div>

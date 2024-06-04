@@ -34,27 +34,32 @@ function MoneyTransfer() {
   });
 
   return (
-    <div className="bg-white min-h-screen flex items-center justify-center absolute inset-0 z-[-1]">
-      <div className="max-w-md w-full px-6 py-8 bg-sky-800 rounded-md shadow-md">
-        <h2 className="text-3xl text-white font-semibold mb-6">
-          Transfer Money
-        </h2>
-        <h3 className=" text-white font-semibold mb-6">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md text-center">
+        <h2 className="text-3xl text-Black font-semibold mb-"> Transfer</h2>
+
+        <h3 className=" text-white font-semibold mb-2">
           {profile?.balance} KWD
         </h3>
         <div>
-          <h3> {userInfo?.username} </h3>
-          <h3>{userInfo?.balance} KWD</h3>
+          <h1 className=" text-2x1 text-gray-800 font-semibold mb-2">
+            {" "}
+            {userInfo?.username}{" "}
+          </h1>
+          <h3 className="text-gray-800 font-semibold mb-2">
+            {userInfo?.balance} KWD
+          </h3>
         </div>
         <input
+          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4"
           placeholder="Enter amount"
           value={amount}
           onChange={(e) => setAmount(e.target.value)}
         />
 
         <button
-          className=" px-4 py-2 lightblue text-white rounded-md hover:bg-yellw-600 transition-colors gap-3"
-          onClick={mutate}
+                  className="mt-2 inline-block rounded bg-sky-600 px-12 py-3 text-lg font-medium text-white shadow-lg transition-transform transform hover:scale-105 hover:bg-sky-700 focus:outline-none focus:ring focus:ring-sky-300"
+                  onClick={mutate}
         >
           Transfer
         </button>

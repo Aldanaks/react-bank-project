@@ -24,29 +24,15 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link to="/">
-              <span className="font-semibold text-xl text-blue-300 ">
-                Royal Bank of Kuwait{" "}
+              <span className="font-semibold text-xl text-white">
+                The Royal Bank of Kuwait{" "}
               </span>
             </Link>
           </div>
           <div className="block">
             <div className="ml-10 flex items-baseline space-x-4">
-              <NavLink
-                to="/"
-                className="text-gray-300 hover:bg-sky-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              >
-                Home
-              </NavLink>
-
               {user ? (
                 <>
-                  <button
-                    className="text-gray-300 hover:bg-sky-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                    onClick={mutate}
-                  >
-                    logout
-                  </button>
-
                   <NavLink
                     to="/profile"
                     className="text-gray-300 hover:bg-sky-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
@@ -74,13 +60,23 @@ const Navbar = () => {
                   >
                     Users
                   </NavLink>
-                  <NavLink
-                    to="/MoneyTransfer"
+
+                  <button
                     className="text-gray-300 hover:bg-sky-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  ></NavLink>
+                    onClick={mutate}
+                  >
+                    logout
+                  </button>
                 </>
               ) : (
                 <>
+                  <NavLink
+                    to="/"
+                    className="text-gray-300 hover:bg-sky-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  >
+                    Home
+                  </NavLink>
+
                   <NavLink
                     to="/login"
                     className="text-gray-300 hover:bg-sky-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium"

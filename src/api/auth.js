@@ -76,9 +76,15 @@ const logout = () => {
   localStorage.removeItem("token");
 };
 
-const Updatep = async (image) => {
+const Updatep = async (userInfo) => {
+  const formData = new FormData();
+
+  for (let key in userInfo) {
+    formData.append(key, userInfo[key]);
+  }
   const { data } = await instance.put(
-    `/mini-project/api/auth/profile/${image}`
+    `/mini-project/api/auth/profile/`,
+    formData
   );
   return data;
 };

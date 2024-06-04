@@ -2,29 +2,25 @@ import React from "react";
 
 const Home = () => {
   return (
-    <section className="bg-white">
-      <section>
+    <section className="bg-gray-50 min-h-screen flex flex-col justify-between">
+      <section className="flex-grow">
         <div className="mx-auto max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:h-screen lg:grid-cols-2">
-            <div className="relative z-10 lg:py-16">
-              <div className="relative h-64 sm:h-80 lg:h-full">
+          <div className="grid grid-cols-1 lg:h-screen lg:grid-cols-2 gap-8">
+            <div className="relative z-10 lg:py-16 flex items-center justify-center">
+              <div className="relative h-64 sm:h-80 lg:h-full w-full rounded-lg overflow-hidden shadow-xl">
                 <img
-                  alt=""
-                  src="https://t3.ftcdn.net/jpg/02/15/96/52/360_F_215965232_562xAwqTJxl8xhh0Pljm5qgKBF4Y132w.jpg"
+                  alt="Banking GIF"
+                  src="https://i.pinimg.com/originals/ca/a5/eb/caa5eb59ab915f7a4ca9d6ab55f1dfde.gif"
                   className="absolute inset-0 h-full w-full object-cover"
                 />
               </div>
             </div>
-
-            <div className="relative flex items-center bg-gray-100">
-              <span className="hidden lg:absolute lg:inset-y-0 lg:-start-16 lg:block lg:w-16 lg:bg-gray-100"></span>
-
-              <div className="p-8 sm:p-16 lg:p-24">
-                <h2 className="text-2xl font-bold sm:text-3xl">
+            <div className="relative flex items-center bg-white p-8 sm:p-16 lg:p-24 rounded-lg shadow-xl">
+              <div>
+                <h2 className="text-4xl font-bold text-gray-900 sm:text-5xl mb-6">
                   The Royal Bank of Kuwait
                 </h2>
-
-                <p className="mt-4 text-gray-600">
+                <p className="mt-4 text-gray-600 leading-relaxed">
                   Experience exceptional banking with personalized service at
                   The Royal Bank of Kuwait. We offer innovative technology,
                   secure online banking, and tailored financial solutions.
@@ -32,12 +28,11 @@ const Home = () => {
                   and businesses. Join us for a superior banking experience.
                   Welcome to The Royal Bank of Kuwait.
                 </p>
-
                 <a
-                  href="Register"
-                  className="mt-8 inline-block rounded border border-black-600 bg-sky-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-sky-800 focus:outline-none focus:ring active:text-sky-600"
+                  href="/register"
+                  className="mt-8 inline-block rounded bg-sky-600 px-12 py-3 text-lg font-medium text-white shadow-lg transition-transform transform hover:scale-105 hover:bg-sky-700 focus:outline-none focus:ring focus:ring-sky-300"
                 >
-                  Create an Account{" "}
+                  Create an Account
                 </a>
               </div>
             </div>
@@ -45,11 +40,9 @@ const Home = () => {
         </div>
       </section>
 
-      <footer className="bg-gray-100">
-        <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
-
-  
-          <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500">
+      <footer className="bg-white py-8 mt-16">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <p className="mx-auto mt-6 max-w-md text-center text-gray-500 leading-relaxed">
             Join our community and experience exceptional service and support.
             Visit us today and take the first step towards a brighter financial
             future.
@@ -58,51 +51,34 @@ const Home = () => {
           <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
             <li>
               <a
-                className="text-gray-700 transition hover:text-gray-700/75"
+                className="text-gray-700 transition hover:text-gray-900"
                 href="#"
               >
-                {" "}
-                About{" "}
+                About
               </a>
             </li>
-
             <li>
               <a
-                className="text-gray-700 transition hover:text-gray-700/75"
-                href="#"
+                className="text-gray-700 transition hover:text-gray-900"
+                href="/transactions"
               >
-                {" "}
-                Services{" "}
+                Transactions
               </a>
             </li>
-
             <li>
               <a
-                className="text-gray-700 transition hover:text-gray-700/75"
-                href="withdraw"
+                className="text-gray-700 transition hover:text-gray-900"
+                href="/DepoWithd"
               >
-                {" "}
-                Withdraw{" "}
+                Balance
               </a>
             </li>
-
             <li>
               <a
-                className="text-gray-700 transition hover:text-gray-700/75"
-                href="transactions"
+                className="text-gray-700 transition hover:text-gray-900"
+                href="/profile"
               >
-                {" "}
-                Transactions{" "}
-              </a>
-            </li>
-
-            <li>
-              <a
-                className="text-gray-700 transition hover:text-gray-700/75"
-                href="profile"
-              >
-                {" "}
-                My profile{" "}
+                My Profile
               </a>
             </li>
           </ul>
@@ -113,7 +89,7 @@ const Home = () => {
                 href="#"
                 rel="noreferrer"
                 target="_blank"
-                className="text-gray-700 transition hover:text-gray-700/75"
+                className="text-gray-700 transition hover:text-gray-900"
               >
                 <span className="sr-only">Facebook</span>
                 <svg
@@ -130,13 +106,12 @@ const Home = () => {
                 </svg>
               </a>
             </li>
-
             <li>
               <a
                 href="#"
                 rel="noreferrer"
                 target="_blank"
-                className="text-gray-700 transition hover:text-gray-700/75"
+                className="text-gray-700 transition hover:text-gray-900"
               >
                 <span className="sr-only">Instagram</span>
                 <svg
@@ -153,13 +128,12 @@ const Home = () => {
                 </svg>
               </a>
             </li>
-
             <li>
               <a
                 href="#"
                 rel="noreferrer"
                 target="_blank"
-                className="text-gray-700 transition hover:text-gray-700/75"
+                className="text-gray-700 transition hover:text-gray-900"
               >
                 <span className="sr-only">Twitter</span>
                 <svg
@@ -172,13 +146,12 @@ const Home = () => {
                 </svg>
               </a>
             </li>
-
             <li>
               <a
                 href="#"
                 rel="noreferrer"
                 target="_blank"
-                className="text-gray-700 transition hover:text-gray-700/75"
+                className="text-gray-700 transition hover:text-gray-900"
               >
                 <span className="sr-only">GitHub</span>
                 <svg
@@ -198,247 +171,9 @@ const Home = () => {
           </ul>
         </div>
       </footer>
-
-      {/*
-  Heads up! 👋
-
-  Plugins:
-    - @tailwindcss/forms
-*/}
-
-      {/*
-  Heads up! 👋
-
-  This component comes with some `rtl` classes. Please remove them if they are not needed in your project.
-*/}
-
-      {/* <section>
-        <div className="max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
-          <div className="grid grid-cols-1 gap-y-8 lg:grid-cols-2 lg:items-center lg:gap-x-16">
-            <div className="mx-auto max-w-lg text-center lg:mx-0 ltr:lg:text-left rtl:lg:text-right">
-              <h2 className="text-3xl font-bold sm:text-4xl">
-Why RBK?            </h2>
-
-              <p className="mt-4 text-gray-600">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
-                vero aliquid sint distinctio iure ipsum cupiditate? Quis, odit
-                assumenda? Deleniti quasi inventore, libero reiciendis minima
-                aliquid tempora. Obcaecati, autem.
-              </p>
-
-              <a
-                href="Register"
-                className="mt-8 inline-block rounded bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400"
-              >
-                Create an Account{" "}
-              </a>
-
-              <h2>Already have an account?</h2>
-              <a
-                href="login"
-                className="mt-8 inline-block rounded bg-blue-600 px-5 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400"
-              > 
-                login here{" "}
-              </a>
-            </div>
-
-            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
-              <a
-                className="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
-                href="#"
-              >
-                <span className="inline-block rounded-lg bg-gray-50 p-3">
-                  <svg
-                    className="h-6 w-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
-                    <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-                    ></path>
-                  </svg>
-                </span>
-
-                <h2 className="mt-2 font-bold">Accountant</h2>
-
-                <p className="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600">
-                  Lorem ipsum dolor sit amet consectetur.
-                </p>
-              </a>
-
-              <a
-                className="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
-                href="#"
-              >
-                <span className="inline-block rounded-lg bg-gray-50 p-3">
-                  <svg
-                    className="h-6 w-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
-                    <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-                    ></path>
-                  </svg>
-                </span>
-
-                <h2 className="mt-2 font-bold">Accountant</h2>
-
-                <p className="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600">
-                  Lorem ipsum dolor sit amet consectetur.
-                </p>
-              </a>
-
-              <a
-                className="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
-                href="#"
-              >
-                <span className="inline-block rounded-lg bg-gray-50 p-3">
-                  <svg
-                    className="h-6 w-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
-                    <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-                    ></path>
-                  </svg>
-                </span>
-
-                <h2 className="mt-2 font-bold">Accountant</h2>
-
-                <p className="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600">
-                  Lorem ipsum dolor sit amet consectetur.
-                </p>
-              </a>
-
-              <a
-                className="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
-                href="#"
-              >
-                <span className="inline-block rounded-lg bg-gray-50 p-3">
-                  <svg
-                    className="h-6 w-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
-                    <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-                    ></path>
-                  </svg>
-                </span>
-
-                <h2 className="mt-2 font-bold">Accountant</h2>
-
-                <p className="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600">
-                  Lorem ipsum dolor sit amet consectetur.
-                </p>
-              </a>
-
-              <a
-                className="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
-                href="#"
-              >
-                <span className="inline-block rounded-lg bg-gray-50 p-3">
-                  <svg
-                    className="h-6 w-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
-                    <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-                    ></path>
-                  </svg>
-                </span>
-
-                <h2 className="mt-2 font-bold">Accountant</h2>
-
-                <p className="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600">
-                  Lorem ipsum dolor sit amet consectetur.
-                </p>
-              </a>
-
-              <a
-                className="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
-                href="#"
-              >
-                <span className="inline-block rounded-lg bg-gray-50 p-3">
-                  <svg
-                    className="h-6 w-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
-                    <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-                    ></path>
-                  </svg>
-                </span>
-
-                <h2 className="mt-2 font-bold">Accountant</h2>
-
-                <p className="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600">
-                  Lorem ipsum dolor sit amet consectetur.
-                </p>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* <div className="bg-red-200 text-white min-h-screen flex items-center justify-center ">
-      <div className="max-w-3xl text-center">
-        <h1 className="text-6xl font-bold mb-8">Welcome to Kuwait #1 Bank</h1>
-        <h1 className="text-5xl font-bold mb-8">Welcome to Kuwait #1 Bank</h1>
-
-        <div>
-          <img src="  "></img>
-        </div>
-      </div>
-    </div> */}
     </section>
   );
 };
 
 export default Home;
+
